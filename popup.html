@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Page Summarizer</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <!-- Plugin Title -->
+    <div class="plugin-title">
+        <h1>电商网站信息提取助手</h1>
+    </div>
+
+    <!-- Tab Navigation -->
+    <div class="tab-container">
+        <button class="tab active" data-target="summary-tab">总结</button>
+        <button class="tab" data-target="config-tab">配置</button>
+    </div>
+
+    <!-- Summary Tab Content -->
+    <div id="summary-tab" class="tab-content active">
+        <div class="button-row">
+            <button id="summarize-btn" class="btn-primary">生成总结</button>
+            <button id="copy-btn" class="btn-secondary" style="display:none;">一键复制</button>
+        </div>
+        <div id="summary-result" class="result-area"></div>
+    </div>
+
+    <!-- Config Tab Content -->
+    <div id="config-tab" class="tab-content">
+        <h3>配置</h3>
+        <div class="form-group">
+            <label for="api-url">Base_URL（不含/chat/completions）:</label>
+            <input type="text" id="api-url" placeholder="输入API地址" value="https://api.trustoken.cn/v1">
+        </div>
+        <div class="form-group">
+            <label for="api-key">API Key:</label>
+            <input type="password" id="api-key" placeholder="输入API密钥">
+        </div>
+        <div class="form-group">
+            <label for="model-name">模型名称:</label>
+            <input type="text" id="model-name" placeholder="auto" value="deepseek-chat">
+        </div>
+        <button id="save-config">保存配置</button>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        本插件由<a href="https://www.aipyaipy.com" target="_blank">AiPy Pro</a>全自动开发完成，邀请码：XOFS
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+
+
+/* Plugin Title Styles */
+.plugin-title {
+    text-align: center;
+    margin-bottom: 8px;
+    padding: 5px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.plugin-title h1 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.plugin-title h1::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #4CAF50;
+    margin: 4px auto 0;
+    border-radius: 1px;
+}
+
+}
+
+
+/* Basic Reset */
+* { margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif; }
+body { width:400px; padding:15px; }
+
+
+/* Tab Container */
+.tab-container { 
+    display:flex; gap:2px; margin-bottom:10px; 
+    background:#f5f5f5; padding:2px; border-radius:6px;
+}
+
+.tab { 
+    padding:10px 20px; border:none; border-radius:4px; 
+    background:#ffffff; color:#333333; cursor:pointer; 
+    transition:all 0.2s ease; font-weight:500; font-size:13px;
+    flex:1; text-align:center; box-shadow:0 1px 3px rgba(0,0,0,0.1);
+}
+
+.tab.active { 
+    background:#4CAF50; color:white; font-weight:600;
+    box-shadow:0 2px 6px rgba(76,175,80,0.3);
+    transform:translateY(-1px);
+}
+
+.tab:hover:not(.active) { 
+    background:#f0f0f0; color:#000000;
+    box-shadow:0 2px 5px rgba(0,0,0,0.15);
+}
+
+/* Tab Content */
+.tab-content { 
+    display:none; padding:15px; border:1px solid #e0e0e0; 
+    border-radius:6px; margin-bottom:10px; background:#fafafa;
+    box-shadow:0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tab-content.active { 
+    display:block; 
+}
+ /* Ensure active content is visible */
+
+/* Form Styles */
+.form-group { margin-bottom:10px; }
+label { display:block; margin-bottom:5px; }
+input { width:100%; padding:8px; border:1px solid #ddd; border-radius:4px; }
+
+/* Button Styles */
+button { 
+    padding:8px 16px; border:none; border-radius:4px; 
+    background:#4CAF50; color:white; cursor:pointer; margin:5px 0;
+}
+button:hover { background:#45a049; }
+
+
+/* Result Area */
+.result-area { 
+    margin:10px 0; padding:15px; border:1px solid #eee; border-radius:4px; 
+    background:#f9f9f9; min-height:120px; max-height:300px; overflow-y:auto;
+    font-size:14px; line-height:1.5;
+}
+
+
+/* Footer */
+.footer { margin-top:15px; padding-top:10px; border-top:1px solid #eee; font-size:12px; }
+.footer a { color:#4CAF50; text-decoration:none; }
+
+
+
+/* Button Row Layout */
+.button-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+/* Button Styles */
+.btn-primary {
+    background: #4CAF50;
+    color: white;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    flex: 1;
+}
+
+.btn-primary:hover {
+    background: #45a049;
+    box-shadow: 0 1px 4px rgba(76,175,80,0.3);
+}
+
+.btn-secondary {
+    background: #2196F3;
+    color: white;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    flex: 1;
+}
+
+.btn-secondary:hover {
+    background: #1976D2;
+    box-shadow: 0 1px 4px rgba(33,150,243,0.3);
+}
+
+/* Config button */
+#save-config {
+    background: #FF9800;
+    color: white;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+    margin-top: 8px;
+}
+
+#save-config:hover {
+    background: #F57C00;
+    box-shadow: 0 1px 4px rgba(255,152,0,0.3);
+}
+
+}
+
+/* Result Area with Formatting */
+.result-area { 
+    margin:10px 0; padding:15px; border:1px solid #eee; border-radius:6px; 
+    background:#fafafa; min-height:120px; max-height:300px; overflow-y:auto;
+    font-size:14px; line-height:1.6;
+    white-space: pre-wrap; /* 保留换行和空格 */
+    word-wrap: break-word; /* 长单词换行 */
+}
+
+.result-area p {
+    margin: 0 0 10px 0;
+    text-align: left;
+}
+
+.result-area ul, .result-area ol {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.result-area li {
+    margin: 5px 0;
+}
+
+.result-area h1, .result-area h2, .result-area h3 {
+    margin: 15px 0 10px 0;
+    color: #333;
+}
+
+.result-area strong, .result-area b {
+    color: #2196F3;
+    font-weight: 600;
+}
+
+.result-area em, .result-area i {
+    color: #FF5722;
+    font-style: italic;
+}
+
+
+/* 成功提示特效 */
+.success-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1000;
+    white-space: nowrap;
+}
+
+.success-message.show {
+    opacity: 1;
+}
+
+/* 按钮成功特效 */
+.btn-success {
+    animation: successPulse 0.6s ease;
+}
+
+@keyframes successPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); background: #45a049; }
+    100% { transform: scale(1); }
+}
+
+/* 复制成功特效 */
+.copy-success {
+    animation: copySuccess 0.8s ease;
+}
+
+@keyframes copySuccess {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); background: #1976D2; }
+    100% { transform: scale(1); }
+}
+
+/* 错误提示特效 */
+.error-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f44336;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1000;
+    white-space: nowrap;
+}
+
+.error-message.show {
+    opacity: 1;
+}
+
+/* 按钮错误特效 */
+.btn-error {
+    animation: errorShake 0.5s ease;
+}
+
+@keyframes errorShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
